@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WGM | About_Us-Page</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/Icon.png">
+  <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="./assets/img/favicon/Icon.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/themes/prism.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/boxicons/css/boxicons.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/theme.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/style.css">
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0];
+    if (mode !== undefined && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 5000);
+      };
+    })();
+  </script>
+  
+</head>
+<body>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner">
+        <img src="./assets/img/favicon/Icon.png" alt="" />
+      </div>
+      <span>Loading...</span>
+    </div>
+  </div>
+  <!-- End Page loading spinner -->
+
+  <main class="page-wrapper">
+
+    <!-- Nav-Bar -->
+    <header class="header navbar navbar-expand-lg navbar-light navbar-sticky">
+      <div class="container px-3">
+        <a href="./index.html" class="navbar-brand pe-3">
+          <img src="./assets/img/favicon/logo.png" width="75%" alt="Silicon">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="./" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a href="./aboutUs.html" class="nav-link active">About US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                  <div class="d-lg-flex pt-lg-3">
+                    <div class="mega-dropdown-column">
+                      <h6 class="px-3 mb-2">About</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="./Services/GISDataAnalysisMapping.html" class="dropdown-item py-1">GIS Data Analysis & Mapping</a></li>
+                        <li><a href="./Services/LidarService.html" class="dropdown-item py-1">Lidar Service</a></li>
+                        <li><a href="./Services/PhotogrammetryService.html" class="dropdown-item py-1">Photogrammetry Service</a></li>
+                        <li><a href="./Services/OrthoPhotoService.html" class="dropdown-item py-1">Ortho Photo Service</a></li>
+                        <li><a href="./Services/BIM.html" class="dropdown-item py-1">BIM</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="./whyUs.html" class="nav-link">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="./contactUs.html" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </header>
+    <!-- End Nav-Bar -->
+
+    <!-- Breadcrumb -->
+    <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+          <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">About</li>
+      </ol>
+    </nav>
+    <!-- End Breadcrumb -->
+
+    <!-- Intro -->
+    <section class="container py-5 mt-n3 mt-sm-0">
+      <div class="row pt-lg-4 pb-lg-3 pb-xl-5">
+        <div class="col-md-3 border-right">
+          <h4 class="pb-1 mb-2 active">About</h4>
+          <h1 class="display-1">WGM</h1>
+        </div>
+        <div class="col-md-9">
+          <p class="fs-xl mb-1 mb-md-7">
+            We, at WGM, have a fervent crew of dexterous and certified associates who have vast hands-on experience and are distinguished by their functional and technical expertise, ensuring our patrons must get the best assistance without breaking their bank. Being a client-centric online platform, our prime motto is to successfully meet our client’s expectation by offering increased flexibility and exceptional customer experience, thereby significantly enhancing operational efficiency and optimizing system functionality.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Intro -->
+
+    <!-- AboutUs -->
+    <section class="pb-5 mb-2 mb-md-4 mb-lg-5">
+      <div class="container position-relative zindex-3">
+        <div class="bg-light position-relative border rounded-3 shadow-sm py-5">
+          <span class="position-absolute top-0 start-0 w-100 h-100 rounded-3 bg-faded-light"></span>
+          <div class="row position-relative justify-content-center zindex-3 py-lg-4">
+            <div class="col-11 col-md-10 col-lg-8 text-center">
+              <p class="fs-xl pb-3 mb-4">
+                With more than a decade of experience in GIS applications, our exceptional skills are not confined to a specific domain; instead, we efficiently encompass all aspects of operation and implementation that include defining business goals, developing specific functional specifications, and customizing software to cater to our client’s needs.
+              </p>
+              <p class="fs-xl pb-3 mb-4">
+                Our ardent professionals even provide functional and technical training to resolve possible troubleshooting issues that generally arise when a client makes any change to software. We have unmatched expertise and operational experience make us stand tall above the rest.
+              </p>
+              <p class="fs-xl pb-3 mb-4">
+                Since the characterization of a map and its associated elements can be done in a multitude of ways, the visualization of the output map substantially depends on it. And that’s the reason, finding the growth-supportive possible requirement is incredibly important for every business.
+              </p>
+            </div>
+            <!-- BG shape -->
+            <div class="position-absolute end-0 bottom-0 text-primary">
+              <svg width="469" height="343" viewBox="0 0 469 343" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M273.631 680.872C442.436 768.853 639.315 708.216 717.593 558.212C795.871 408.208 732.941 212.157 564.137 124.176C395.333 36.195 198.453 96.8326 120.175 246.836C41.8972 396.84 104.827 592.891 273.631 680.872ZM236.335 752.344C440.804 858.914 688.289 788.686 789.109 595.486C889.928 402.286 805.903 159.274 601.433 52.7043C396.964 -53.8654 149.479 16.3623 48.6595 209.562C-52.1598 402.762 31.8652 645.774 236.335 752.344Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M298.401 633.404C434.98 704.59 598.31 656.971 664.332 530.451C730.355 403.932 675.946 242.827 539.367 171.642C402.787 100.457 239.458 148.076 173.435 274.595C107.413 401.114 161.822 562.219 298.401 633.404ZM288.455 652.464C434.545 728.606 611.369 678.429 683.403 540.391C755.437 402.353 695.402 228.725 549.312 152.583C403.222 76.4404 226.398 126.617 154.365 264.655C82.331 402.693 142.365 576.321 288.455 652.464Z" fill="currentColor"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End AboutUs -->
+
+    <section class="container mb-1 mb-md-4 mb-lg-5">
+      <div class="row pb-xl-3">
+        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+          <div class="gallery rounded-3 shadow-sm" lg-uid="lg0">
+            <a href="https://goo.gl/maps/LYCbCjqWW15rZ8Ee7" data-iframe="true" class="gallery-item rounded-3" data-sub-html="<h6 class=&quot;fs-sm text-light&quot;>Noe Valley Bakery 24th Street, San Francisco, CA, USA</h6>">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.470465006852!2d77.57959711607984!3d12.900157870664334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15159a223f3d%3A0xfbbc717ce62b31e7!2sWGM!5e0!3m2!1sen!2sin!4v1644101261303!5m2!1sen!2sin" width="600" height="600" allowfullscreen="" loading="lazy"></iframe>
+            </a>
+          </div>
+        </div>
+        <div class="pb-3 col-xl-5 col-md-6 offset-xl-1">
+          <h2 class="h1 pb-4 mb-1 mb-lg-3">Get Professional Consultation</h2>
+          <ul class="list-unstyled pb-3 mb-0 mb-lg-3">
+            <li class="d-flex mb-3">
+              <i class="bx bx-map text-muted fs-xl mt-1 me-2"></i>
+              #233, Manjunatha Nilaya, J.P Nagar,5th phase,Bangalore-560078
+            </li>
+            <li class="d-flex mb-3">
+              <i class="bx bx-phone-call text-muted fs-xl mt-1 me-2"></i>
+              +91-99940-92152
+            </li>
+            <li class="d-flex mb-3">
+              <i class="bx bx-time text-muted fs-xl mt-1 me-2"></i>
+              <div>
+                <div><span class="text-dark fw-semibold me-1">Mon - Sat:</span>6:00 am - 22:00 pm</div>
+              </div>
+            </li>
+            <li class="d-flex mb-3">
+              <i class="bx bx-envelope text-muted fs-xl mt-1 me-2"></i>
+              info@wonder-maps.com
+            </li>
+          </ul>
+          <a href="./contactUs.html" class="btn btn-primary shadow-primary btn-lg">Make an appointment</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container border-top dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <div class="container pt-lg-4">
+      <div class="row pb-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+            <img src="assets/img/favicon/logo.png" alt="WGM">
+          </div>
+          <p class="fs-sm text-light pb-lg-3 mb-4">
+            We, at WGM, have a fervent crew of dexterous and certified associates who have vast hands-on experience and are distinguished by their functional and technical expertise, ensuring our patrons must get the best assistance without breaking their bank. Being a client-centric online platform, our prime motto is to successfully meet our client’s expectation by offering increased flexibility and exceptional customer experience, thereby significantly enhancing operational efficiency and optimizing system functionality.
+          </p>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+          <div id="footer-links" class="row">
+            <div class="col-lg-4">
+              <h5 class="mb-2 border-bottom">
+                Useful Links
+              </h5>
+              <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item opacity-50"><a href="/index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                  <li class="nav-item opacity-50"><a href="/aboutUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">About Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/whyUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Why Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/contactUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-3">
+              <h5 class="mb-2 border-bottom">
+                Social Links
+              </h5>
+              <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item opacity-50"><a href="https://ms-my.facebook.com/wondergeomapping.mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">Facebook</a></li>
+                  <li class="nav-item opacity-50"><a href="https://www.linkedin.com/company/wonder-geo-mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">LinkedIn</a></li>
+                  <li class="nav-item opacity-50"><a href="https://wa.me/+919994092152" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">What's App</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h5 class="mb-2 border-bottom">Contact Us</h5>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a href="mailto:lara@wonder-maps.com" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">lara@wonder-maps.com</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Phone: </spin><a href="tel:+919994092152" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">+91-99940-92152</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a target="_blank" href="https://goo.gl/maps/gvV4nMLc3PsbHXx76" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">#233, Manjunatha Nilaya J.P Nagar,5th phase,Bangalore-560078.</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fs-xs text-center pb-2 pb-lg-0 mb-0">
+        <span class="text-light">Copyright &copy; Wonder geo mapping consultancy and services 2022 All rights reserved </span>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+  <!-- End Back to top button -->
+
+  <!-- Required Library Files -->
+    <!-- Vendor Scripts -->
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="./assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="./assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="./assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="./assets/js/theme.min.js"></script>
+  <!-- End Required Library Files -->
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WGM | Lidar_Service-Page</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/Icon.png">
+  <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/img/favicon/Icon.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/prismjs/themes/prism.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/css/theme.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="/assets/css/style.css">
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0];
+    if (mode !== undefined && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 5000);
+      };
+    })();
+  </script>
+  
+</head>
+<body>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner">
+        <img src="../assets/img/favicon/Icon.png" alt="" />
+      </div>
+      <span>Loading...</span>
+    </div>
+  </div>
+  <!-- End Page loading spinner -->
+
+  <main class="page-wrapper">
+
+    <!-- Nav-Bar --> 
+    <header class="header navbar navbar-expand-lg navbar-light navbar-sticky">
+      <div class="container px-3">
+        <a href="/index.html" class="navbar-brand pe-3">
+          <img src="../assets/img/favicon/logo.png" width="75%" alt="Silicon">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="/aboutUs.html" class="nav-link">About US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                  <div class="d-lg-flex pt-lg-3">
+                    <div class="mega-dropdown-column">
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="./GISDataAnalysisMapping.html" class="dropdown-item py-1">GIS Data Analysis & Mapping</a></li>
+                        <li class="active"><a href="./LidarService.html" class="dropdown-item py-1 active">Lidar Service</a></li>
+                        <li><a href="./PhotogrammetryService.html" class="dropdown-item py-1">Photogrammetry Service</a></li>
+                        <li><a href="./OrthoPhotoService.html" class="dropdown-item py-1">Ortho Photo Service</a></li>
+                        <li><a href="./BIM.html" class="dropdown-item py-1">BIM</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="/whyUs.html" class="nav-link">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contactUs.html" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </header>
+    <!-- End Nav-Bar -->
+
+    <!-- Breadcrumb -->
+    <nav class="container mt-lg-3 py-3" aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+          <a href="/index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a>Services</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lidar-Service</li>
+      </ol> 
+    </nav>
+    <!-- End Breadcrumb -->
+
+    <!-- Service Title -->
+    <section class="container mt-4 pt-lg-2 px-5">
+      <h1 class="pb-1" style="max-width: 970px;">Lidar Service</h1>
+      <p class="mb-4 pb-1">&ensp;&ensp;&ensp;&ensp;&ensp;“The best and effective method to create spatial data and is being widely used for a multitude of applications, including 3D Modeling, Topographic Mapping, Infrastructure, to name a few.”</p>
+    </section>
+    <!-- End Service Title -->
+
+    <!-- Service Image -->
+    <div class="jarallax mb-lg-5 mb-4" data-jarallax="" data-speed="0.4" style="height: 36.45vw; min-height: 300px;" data-jarallax-original-styles="height: 36.45vw; min-height: 300px;">
+      <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;"><div class="jarallax-img" style="background-image: url(../assets/img/services/laider.jpg); object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px; width: 1349px; height: 389.363px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -36.1813px; transform: translate3d(0px, -78.8625px, 0px);" data-jarallax-original-styles="background-image: url(assets/img/blog/single/cover-image.jpg);"></div>
+      </div>
+    </div>
+    <!-- End Service Image -->
+
+    <!-- Service Body -->
+    <section class="container mb-5 pt-4 pb-2 py-mg-4">
+      <div class="row gy-4">
+
+        <!-- Content -->
+        <div class="col-lg-7 px-5">
+          <p class="mb-4 pb-2">
+            WGM can assist you to find various data for your survey work across the world. Our wide network of trusted partners across the globe endeavor to provide high-quality LiDAR services on any platform including ALS and MLS, with the promise of cost-effectiveness.
+          </p>
+
+          <p class="mb-4 pb-2">
+            Our LiDAR data processing services assist in the creation of DEM, Triangular Inverse Networks (TIN) and Digital Terrain Models (DTM), providing precise details of the earth’s surface. Our services have proven beneficial in enhancing the power of decision-making among various businesspersons. LiDAR services have helped many public utility services including water, gas, and electricity by supporting in planning, execution, and maintenance of their networks. LiDAR classifications have also proved a boon to agricultural industries by various services like crop assessment mapping, generating maps for erosion mitigation, creating 3 D farm models, etc. In this way, LiDAR services can assist in many industrial sectors in their planning and making several decisions.
+          </p>
+
+          <h2>Our LiDAR data processing services:</h2>
+          <p>
+            <ul>
+              <li><strong>Ground Classification</strong><br/>By classifying ground points, we use them for creating surfaces.</li>	
+              <li><strong>Advanced classification</strong><br/>We are also capable of classifying several features like building, roads, etc. according to their specifications.</li>	
+              <li><strong>Ortho generation</strong><br/>By using DEM, we create Orthophotos, which are a precise representation of Earth’s topographical features. </li>	
+              <li><strong>Feature Extraction</strong><br/>We capture features from LAS files according to customer’s requirements.</li>	
+              <li><strong>3d Building modeling</strong><br/>We create 3D models of buildings from LAS files. The building which is complex in design is often edited manually. </li>	
+              </ul>
+          </p>
+
+        </div>
+
+        <!-- Sharing -->
+        <div class="col-lg-5 position-relative">
+          <div class="sticky-top px-3 ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+            <h6 style=" text-decoration: underline;">What we do:</h6>
+            <div class="mb-4 pb-lg-3">
+              <ul class="list cat-list">
+                <li>Aerial LiDAR Matching</li>
+                <li>Aerial LiDAR Classification</li>
+                <li>Aerial LiDAR Mapping</li>
+              </ul>
+            </div>
+            <h6 style=" text-decoration: underline;">Typical LiDAR data processing services by Wonder Geo include:</h6>
+            <div class="mb-4 pb-lg-3">
+              <ul class="list cat-list">
+                <li>LiDAR data processing of electric-related utilities.</li>
+                <li>Watershed delineation by using LiDAR data processing techniques.</li>
+                <li>LiDAR data processing of forest areas.</li>
+                <li>LiDAR data classification.</li>
+                <li>LiDAR data processing for gas and oil networks.</li>
+              </ul>
+            </div>
+            <img src="../assets/img/services/laider.jpeg" style="width: 100%;" class="pr-3 pb-3" alt="">
+            <img src="../assets/img/services/laider.jpg" style="width: 100%; height: 30vh;" class="pr-3" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Service Body -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container border-top dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <div class="container pt-lg-4">
+      <div class="row pb-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+            <img src="../assets/img/favicon/logo.png" alt="WGM">
+          </div>
+          <p class="fs-sm text-light pb-lg-3 mb-4">
+            We, at WGM, have a fervent crew of dexterous and certified associates who have vast hands-on experience and are distinguished by their functional and technical expertise, ensuring our patrons must get the best assistance without breaking their bank. Being a client-centric online platform, our prime motto is to successfully meet our client’s expectation by offering increased flexibility and exceptional customer experience, thereby significantly enhancing operational efficiency and optimizing system functionality.
+          </p>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+          <div id="footer-links" class="row">
+            <div class="col-lg-4">
+              <h5 class="mb-2 border-bottom">
+                Useful Links
+              </h5>
+              <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item opacity-50"><a href="/index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                  <li class="nav-item opacity-50"><a href="/aboutUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">About Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/whyUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Why Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/contactUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-3">
+              <h5 class="mb-2 border-bottom">
+                Social Links
+              </h5>
+              <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item opacity-50"><a href="https://ms-my.facebook.com/wondergeomapping.mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">Facebook</a></li>
+                  <li class="nav-item opacity-50"><a href="https://www.linkedin.com/company/wonder-geo-mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">LinkedIn</a></li>
+                  <li class="nav-item opacity-50"><a href="https://wa.me/+919994092152" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">What's App</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h5 class="mb-2 border-bottom">Contact Us</h5>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a href="mailto:lara@wonder-maps.com" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">lara@wonder-maps.com</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Phone: </spin><a href="tel:+919994092152" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">+91-99940-92152</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a target="_blank" href="https://goo.gl/maps/gvV4nMLc3PsbHXx76" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">#233, Manjunatha Nilaya J.P Nagar,5th phase,Bangalore-560078.</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fs-xs text-center pb-2 pb-lg-0 mb-0">
+        <span class="text-light">Copyright &copy; Wonder geo mapping consultancy and services 2022 All rights reserved </span>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+  <!-- End Back to top button -->
+
+  <!-- Required Library Files -->
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="/assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="/assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="/assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+  <!-- End Required Library Files -->
+</body>
+</html>

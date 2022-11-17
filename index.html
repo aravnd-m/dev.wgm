@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WGM | Home-Page</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/Icon.png">
+  <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="./assets/img/favicon/Icon.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/themes/prism.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/boxicons/css/boxicons.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/theme.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/style.css">
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0];
+    if (mode !== undefined && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 5000);
+      };
+    })();
+  </script>
+  
+</head>
+<body>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner">
+        <img src="./assets/img/favicon/Icon.png" alt="" />
+      </div>
+      <span>Loading...</span>
+    </div>
+  </div>
+  <!-- End Page loading spinner -->
+
+  <main class="page-wrapper">
+
+    <!-- Nav-Bar --> 
+    <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+      <div class="container px-3">
+        <a href="./index.html" class="navbar-brand pe-3">
+          <img src="./assets/img/favicon/logo.png" width="75%" alt="Silicon">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a href="./" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="./aboutUs.html" class="nav-link">About US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                  <div class="d-lg-flex pt-lg-3">
+                    <div class="mega-dropdown-column">
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="./Services/GISDataAnalysisMapping.html" class="dropdown-item py-1">GIS Data Analysis & Mapping</a></li>
+                        <li><a href="./Services/LidarService.html" class="dropdown-item py-1">Lidar Service</a></li>
+                        <li><a href="./Services/PhotogrammetryService.html" class="dropdown-item py-1">Photogrammetry Service</a></li>
+                        <li><a href="./Services/OrthoPhotoService.html" class="dropdown-item py-1">Ortho Photo Service</a></li>
+                        <li><a href="./Services/BIM.html" class="dropdown-item py-1">BIM</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                  <div class="d-lg-flex pt-lg-3">
+                    <div class="mega-dropdown-column">
+                      <h6 class="px-3 mb-2">About</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
+                        <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
+                      </ul>
+                      <h6 class="px-3 mb-2">Portfolio</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                        <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                        <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                        <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                        <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                        <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column">
+                      <h6 class="px-3 mb-2">Blog</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
+                        <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
+                        <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
+                        <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                        <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                        <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                        <li><a href="blog-podcast.hml" class="dropdown-item py-1">Podcast</a></li>
+                      </ul>
+                      <h6 class="px-3 mb-2">Services</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="services.html" class="dropdown-item py-1">Services Page</a></li>
+                        <li><a href="services-single.html" class="dropdown-item py-1">Service Details</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column">
+                      <h6 class="px-3 mb-2">Contacts</h6>
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                        <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                      </ul>
+                      <h6 class="px-3 mb-2">Specialty</h6>
+                      <ul class="list-unstyled">
+                        <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                        <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              -->
+              <li class="nav-item">
+                <a href="./whyUs.html" class="nav-link">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="./contactUs.html" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </header>
+    <!-- End Nav-Bar -->
+    
+    <!-- Carousel (Slider) Home-Page -->
+    <section class="pt-5">
+      <div class="position-relative py-lg-4 py-xl-5 pt-lg-4"> 
+        <!-- Swiper tabs -->
+        <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
+          <div id="image-1" class="jarallax position-absolute top-0 start-0 swiper-tab active" data-jarallax data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img" style="background-image: url(./assets/img/carousel_img/scroll-1.jpeg);"></div>
+          </div>
+          <div id="image-2" class="jarallax position-absolute top-0 start-0 swiper-tab" data-jarallax data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img" style="background-image: url(./assets/img/carousel_img/scroll-2.jpg);"></div>
+          </div>
+          <div id="image-3" class="jarallax position-absolute top-0 start-0 swiper-tab" data-jarallax data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img" style="background-image: url(./assets/img/carousel_img/scroll-3.jpg);"></div>
+          </div>
+          <div id="image-4" class="jarallax position-absolute top-0 start-0 swiper-tab" data-jarallax data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img" style="background-image: url(./assets/img/carousel_img/scroll-4.jpg);"></div>
+          </div>
+        </div>
+        <!-- Swiper slider -->
+        <div class="container position-relative zindex-5">
+          <div class="row py-2 py-md-3">
+            <div class="col-xl-5 col-lg-7 col-md-9">
+              <!-- Slider controls (Prev / next) -->
+              <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
+                <button title="chevron-left" type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button title="chevron-right" type="button" id="case-study-next" class="btn btn-next btn-icon btn-sm bg-white ms-2">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+              <!-- Card -->
+              <div class="card p-3">
+                <div class="card-body">
+                  <div class="swiper" data-swiper-options='
+                    {
+                      "spaceBetween": 30,
+                      "loop": true,
+                      "tabs": true,
+                      "autoplay": {
+                        "delay": 3000,
+                        "disableOnInteraction": false
+                      },
+                      "pagination": {
+                        "el": "#case-study-pagination",
+                        "clickable": true
+                      },
+                      "navigation": {
+                        "prevEl": "#case-study-prev",
+                        "nextEl": "#case-study-next"
+                      }
+                    }'
+                  >
+                    <div class="swiper-wrapper">
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-1">
+                        <h3 class="mb-2">Photogrammetry Service</h3>
+                        
+                        <p class="pb-2 pb-lg-3 mb-3">
+                          We provide different knid of services in Photogrammetry Service:
+                          <span>
+                            <ul style="list-style: none;">
+                              <li>Aerial triangulation &nbsp;&nbsp;&nbsp;&nbsp; Planimetric
+                                  mapping</li>
+                              <li>2D/3D Digitizing &emsp;&emsp;&nbsp; Dtm/Dem editing</li>
+                              <li>3D modeling &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Manual contour</li>
+                            </ul>
+                          </span>
+                        </p>
+                        <a href="./Services/PhotogrammetryService.html" class="btn btn-primary">View Page...</a>
+                      </div>
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-2">
+                        <h3 class="mb-2">Ortho Photo Service</h3>
+                        
+                        <p class="pb-2 pb-lg-3 mb-3">
+                          A <b>digital elevation model (DEM)</b> is required to create an
+                          accurate <b><i>orthophoto</i></b> as distortions in the image due to the
+                          varying distance between the camera/sensor and different points
+                          on the ground need to be corrected.
+                          <span>
+                            <ul style="list-style: none;">
+                              <li>OrthoPhoto,Mosaicing and Cleanup</li>
+                              <li>Ortho Photo Generation</li>
+                            </ul>
+                          </span>
+                        </p>
+                        <a href="./Services/OrthoPhotoService.html" class="btn btn-primary">View Page...</a>
+                      </div>
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-3">
+                        <h3 class="mb-2">GIS Data Analysis & Mapping</h3>
+                        
+                        <p class="pb-2 pb-lg-3 mb-3">
+                          We provide different knid of services in <b> GIS Data Analysis Mapping </b> Service:
+                          <span>
+                            <ul style="list-style: none;">
+                              <li>Vector Mapping &emsp;&emsp;&emsp; Parcel mapping</li>
+                              <li>Topographic Creation &nbsp; Utility Mapping</li>
+                              <li>Cartography &emsp;&emsp;&emsp;&emsp;&nbsp; all types production etc.</li>
+                            </ul>
+                          </span>
+                        </p>
+                        <a href="./Services/GISDataAnalysisMapping.html" class="btn btn-primary">View Page...</a>
+                      </div>
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-4">
+                        <h3 class="mb-2">Lidar Service.</h3>
+                        
+                        <p class="pb-2 pb-lg-3 mb-3">
+                          We provide different knid of services in <span> Lidar </span> Service:
+                          <span>
+                            <ul style="list-style: none;">
+                              <li>Terra match(Aerial match /Mobile match)</li>
+                              <li>Mobile mapping</li>
+                              <li>3D City modeling &emsp;&nbsp;&nbsp; Classification(All types)</li>
+                              <li>DTM/DSM &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Contour processing</li>
+                            </ul>
+                          </span>
+                        </p>
+                        <a href="./Services/LidarService.html" class="btn btn-primary">View Page...</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pagination (bullets) -->
+              <div class="dark-mode pt-4 mt-3">
+                <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Carousel (Slider) Home-Page -->
+
+    <!-- Features (Icon boxes) -->
+    <section id="WhyUs" class="container pt-5 my-2 my-md-4 my-lg-3">
+      <h2 class="h1 text-center mb-lg-4">Why Us?</h2>
+      <p class="h3 text-center pt-1 pt-xl-3 mb-lg-4">
+        WONDER GEO MAPPING CONSULTANCY AND SERVICES
+      </p>
+      <p class="h6 text-center pt-1 pt-xl-3 mb-lg-4">
+        Wonder Geo Mapping (WGM) has immense expertise in different verticals including GIS data & digital mapping, LiDAR, photogrammetry, OrthoPhoto; just to name a few. With the advent of state-of-the-art space and geospatial technologies, we endeavor to leverage advanced applications and solutions for the proper implementation of geospatial applications across different industries.
+      </p>
+      <div class="swiper mx-n2" data-swiper-options='{
+        "slidesPerView": 1,
+        "spaceBetween": 8,
+        "pagination": {
+          "el": ".swiper-pagination",
+          "clickable": true
+        },
+        "breakpoints": {
+          "500": {
+            "slidesPerView": 2
+          },
+          "800": {
+            "slidesPerView": 3
+          },
+          "1200": {
+            "slidesPerView": 4
+          }
+        }
+      }'>
+        <div class="swiper-wrapper">
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto py-3">
+            <div class="card h-100 card-body card-hover mx-2">
+              <i class="bx bx-rocket display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+              <a href="./Services/PhotogrammetryService.html" class="h5 pt-3 pb-1 mb-2">Photogrammetry Service</a>
+              <p class="mb-0">
+              </p>
+                <ul>
+                  <li>Aerial triangulation </li>
+                  <li> Planimetric mapping</li>
+                  <li>2D/3D Digitizing </li><li> Dtm/Dem editing</li>
+                  <li>3D modeling </li><li> Manual contour</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto py-3">
+            <div class="card h-100 card-body card-hover mx-2">
+              <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+              <a href="/Services/OrthoPhotoService.html" class="h5 pt-3 pb-1 mb-2">Ortho Photo Service</a>
+              <p class="mb-0">
+                A digital elevation model (DEM) is required to create an accurate orthophoto as distortions in the image due to the varying distance between the camera/sensor and different points on the ground need to be corrected.
+                <ul>
+                  <li>OrthoPhoto,Mosaicing and Cleanup</li>
+                  <li>Ortho Photo Generation</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto py-3">
+            <div class="card h-100 card-body card-hover mx-2">
+              <i class="bx bx-time-five display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+              <a href="/Services/GISDataAnalysisMapping.html" class="h5 pt-3 pb-1 mb-2">GIS Data Analysis & Mapping</a>
+              <p class="mb-0">
+              </p>
+                <ul>
+                  <li>Vector Mapping </li>
+                  <li> Parcel mapping</li>
+                  <li>Topographic Creation </li>
+                  <li> Utility Mapping</li>
+                  <li>Cartography </li>
+                  <li>All types production etc.</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto py-3">
+            <div class="card h-100 card-body card-hover mx-2">
+              <i class="bx bx-group display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+              <a href="/Services/LidarService.html" class="h5 pt-3 pb-1 mb-2">Lidar Service</a>
+              <p class="mb-0">
+              </p>
+                <ul>
+                  <li>Terra match(Aerial match /Mobile match)</li>
+                  <li>Mobile mapping</li>
+                  <li>3D City modeling </li>
+                  <li> Classification(All types)</li>
+                  <li>DTM/DSM </li>
+                  <li> Contour processing</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination position-relative d-xl-none pt-3 mt-4"></div>
+      </div>
+    </section>
+    <!-- End of Features -->
+    
+    <!-- Contact -->
+    <section class="container mt-n2 mt-sm-0">
+      <div class="bg-secondary rounded-3 overflow-hidden">
+        <div class="row align-items-center">
+          <div class="col-xl-4 col-md-5 offset-lg-1">
+            <div class="pt-5 pb-3 pb-md-5 px-4 px-lg-0 text-center text-md-start">
+              <p class="lead mb-3">Ready to get started?</p>
+              <h2 class="h1 pb-3 pb-sm-4">Take Your <span style="color: #00ab6f;">Business</span> to&nbsp;the Next Level</h2>
+              <a href="./contactUs.html" class="btn btn-primary btn-lg">Work with us</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-7 offset-xl-1">
+            <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100">
+              <svg class="d-none d-md-block position-absolute top-50 start-0 translate-middle-y" width="868" height="868" style="min-width: 868px;" viewBox="0 0 868 868" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.15" cx="434" cy="434" r="434" fill="#6366F1"></circle></svg>
+              <img src="./assets/img/about/cta.png" class="position-relative zindex-3 mb-2 my-lg-4" width="382" alt="Illustration">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact -->
+
+    <!-- AboutUs -->
+    <section class="container mt-lg-2 mt-xl-4 py-3">
+      <div class="row">
+        <div class="col-md-5" style="align-self: center;" data-jarallax-element="25" data-disable-parallax-down="lg">
+          <img src="./assets/img/carousel_img/photogrammetry.png" class="d-block mx-auto" width="746" alt="Image">
+        </div>
+        <div class="col-lg-6 col-md-7" data-jarallax-element="-25" data-disable-parallax-down="lg">
+          <h2 class="pb-3 pt-2 pt-md-0">Wonder geo mapping consultancy and servicess</h2>
+          <p>
+            We are specialized in photogrammetry as well as Lidar & Gis. Professionals at Wonder geo mapping are highly experienced and understand the need of providing exceptional client services which results in significant growth of our company.
+          </p>
+          <p>
+            Wonder geo mapping consultancy and services is a leading Photogrammetry service provider to worldwide. Photogrammetry Services provide high resolution data deliverables at cost effective prices to its clients across the world. we are experts in highly effective customized process for Photogrammetry data processing and mapping which enables us to deliver accurate, detailed and reliable information faster. For more information on our Photogrammetry services kindly contact our Head Office, Wonder geo mapping consultancy and services.
+          </p>
+          <ul class="list-unstyled pb-2">
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              Photogrammetry
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              mobile mapping
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              Ortho Photo
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              2D/3D Digitizing
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              DTM/Dem Editing
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              Gis
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              Lidar
+            </li>
+            <li class="d-flex align-items-center pb-1 mb-2">
+              <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+              3D Modelling
+            </li>
+          </ul>
+      </div>
+    </section>
+    <!-- End AboutUs -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container border-top dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <div class="container pt-lg-4">
+      <div class="row pb-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+            <img src="assets/img/favicon/logo.png" alt="WGM">
+          </div>
+          <p class="fs-sm text-light pb-lg-3 mb-4">
+            We, at WGM, have a fervent crew of dexterous and certified associates who have vast hands-on experience and are distinguished by their functional and technical expertise, ensuring our patrons must get the best assistance without breaking their bank. Being a client-centric online platform, our prime motto is to successfully meet our client’s expectation by offering increased flexibility and exceptional customer experience, thereby significantly enhancing operational efficiency and optimizing system functionality.
+          </p>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+          <div id="footer-links" class="row">
+            <div class="col-lg-4">
+              <h5 class="mb-2 border-bottom">
+                Useful Links
+              </h5>
+              <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item opacity-50"><a href="/index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                  <li class="nav-item opacity-50"><a href="/aboutUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">About Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/whyUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Why Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/contactUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-3">
+              <h5 class="mb-2 border-bottom">
+                Social Links
+              </h5>
+              <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item opacity-50"><a href="https://ms-my.facebook.com/wondergeomapping.mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">Facebook</a></li>
+                  <li class="nav-item opacity-50"><a href="https://www.linkedin.com/company/wonder-geo-mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">LinkedIn</a></li>
+                  <li class="nav-item opacity-50"><a href="https://wa.me/+919994092152" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">What's App</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h5 class="mb-2 border-bottom">Contact Us</h5>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a href="mailto:lara@wonder-maps.com" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">lara@wonder-maps.com</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Phone: </spin><a href="tel:+919994092152" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">+91-99940-92152</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a target="_blank" href="https://goo.gl/maps/gvV4nMLc3PsbHXx76" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">#233, Manjunatha Nilaya J.P Nagar,5th phase,Bangalore-560078.</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fs-xs text-center pb-2 pb-lg-0 mb-0">
+        <span class="text-light">Copyright &copy; Wonder geo mapping consultancy and services 2022 All rights reserved </span>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+  <!-- End Back to top button -->
+
+  <!-- Required Library Files -->
+    <!-- Vendor Scripts -->
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="./assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="./assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="./assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="./assets/js/theme.min.js"></script>
+  <!-- End Required Library Files -->
+</body>
+</html>

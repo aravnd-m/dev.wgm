@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WGM | Contact_Us-Page</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/Icon.png">
+  <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="./assets/img/favicon/Icon.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/themes/prism.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/boxicons/css/boxicons.min.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/theme.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/style.css">
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0];
+    if (mode !== undefined && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 5000);
+      };
+    })();
+  </script>
+  
+</head>
+<body>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner">
+        <img src="./assets/img/favicon/Icon.png" alt="" />
+      </div>
+      <span>Loading...</span>
+    </div>
+  </div>
+  <!-- End Page loading spinner -->
+
+  <main class="page-wrapper">
+
+    <!-- Nav-Bar --> 
+    <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+      <div class="container px-3">
+        <a href="./index.html" class="navbar-brand pe-3">
+          <img src="./assets/img/favicon/logo.png" width="75%" alt="Silicon">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="./" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="./aboutUs.html" class="nav-link">About US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                  <div class="d-lg-flex pt-lg-3">
+                    <div class="mega-dropdown-column">
+                      <ul class="list-unstyled mb-3">
+                        <li><a href="./Services/GISDataAnalysisMapping.html" class="dropdown-item py-1">GIS Data Analysis & Mapping</a></li>
+                        <li><a href="./Services/LidarService.html" class="dropdown-item py-1">Lidar Service</a></li>
+                        <li><a href="./Services/PhotogrammetryService.html" class="dropdown-item py-1">Photogrammetry Service</a></li>
+                        <li><a href="./Services/OrthoPhotoService.html" class="dropdown-item py-1">Ortho Photo Service</a></li>
+                        <li><a href="./Services/BIM.html" class="dropdown-item py-1">BIM</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="./whyUs.html" class="nav-link">Why Us</a>
+              </li>
+              <li class="nav-item active">
+                <a href="./contactUs.html" class="nav-link active">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </header>
+    <!-- End Nav-Bar -->
+
+    <!-- Contact form -->
+    <section class="position-relative py-5 row pt-lg-4 pb-lg-3 pb-xl-5 w-100">
+      <div class="col-md-7 container position-relative zindex-5 py-2 py-md-4 py-lg-5">
+        <div class="row justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3">
+          <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11 pt-5">
+            <h2 class="mb-4">Let's Work Together...</h2>
+            <p class="text-muted mb-0">Like what you have seen? Let's get started. Just fill in a few details and we will get in touch as soon as possible.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <form class="row needs-validation" novalidate>
+              <div class="col-sm-6 mb-4">
+                <label for="fn" class="form-label">First name</label>
+                <input type="text" id="fn" class="form-control" required>
+                <div class="invalid-feedback">Please, enter your first name!</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="ln" class="form-label">Last name</label>
+                <input type="text" id="ln" class="form-control" required>
+                <div class="invalid-feedback">Please, enter your last name!</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" id="email" class="form-control" required>
+                <div class="invalid-feedback">Please, provide a valid email address!</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" id="phone" class="form-control" required data-format="custom" data-delimiter="-" data-blocks="2 3 3" data-numeral="8" placeholder="00-000-000">
+                <div class="invalid-feedback">Please, choose your contact number!</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="city" class="form-label">Country</label>
+                  <input type="text" id="email" class="form-control" required>
+                <div class="invalid-feedback">Please, choose your city!</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="company" class="form-label">Your company</label>
+                <input type="text" id="company" class="form-control" required>
+                <div class="invalid-feedback">Please, provide your company name!</div>
+              </div>
+              <div class="col-sm-12 mb-4">
+                <label for="position" class="form-label">Your position</label>
+                <select id="position" class="form-select">
+                  <option value="Employee">Employee</option>
+                  <option value="Owner">Owner</option>
+                  <option value="CEO">CEO</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+              <div class="col-12 mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" rows="4" required></textarea>
+                <div class="invalid-feedback">Please, enter your message!</div>
+              </div>
+              <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
+                <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send a request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 border-left" style="align-self: center;">
+        <img src="/assets/img/about/aboutUs.jpeg" style="width: 100%;" alt="">
+      </div>
+    </section>
+    
+    <!-- End Contact Form -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container border-top dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <div class="container pt-lg-4">
+      <div class="row pb-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+            <img src="assets/img/favicon/logo.png" alt="WGM">
+          </div>
+          <p class="fs-sm text-light pb-lg-3 mb-4">
+            We, at WGM, have a fervent crew of dexterous and certified associates who have vast hands-on experience and are distinguished by their functional and technical expertise, ensuring our patrons must get the best assistance without breaking their bank. Being a client-centric online platform, our prime motto is to successfully meet our client’s expectation by offering increased flexibility and exceptional customer experience, thereby significantly enhancing operational efficiency and optimizing system functionality.
+          </p>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+          <div id="footer-links" class="row">
+            <div class="col-lg-4">
+              <h5 class="mb-2 border-bottom">
+                Useful Links
+              </h5>
+              <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item opacity-50"><a href="/index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                  <li class="nav-item opacity-50"><a href="/aboutUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">About Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/whyUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Why Us</a></li>
+                  <li class="nav-item opacity-50"><a href="/contactUs.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-3">
+              <h5 class="mb-2 border-bottom">
+                Social Links
+              </h5>
+              <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item opacity-50"><a href="https://ms-my.facebook.com/wondergeomapping.mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">Facebook</a></li>
+                  <li class="nav-item opacity-50"><a href="https://www.linkedin.com/company/wonder-geo-mapping" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">LinkedIn</a></li>
+                  <li class="nav-item opacity-50"><a href="https://wa.me/+919994092152" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">What's App</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h5 class="mb-2 border-bottom">Contact Us</h5>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a href="mailto:lara@wonder-maps.com" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">lara@wonder-maps.com</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Phone: </spin><a href="tel:+919994092152" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">+91-99940-92152</a></li>
+                  <li class="nav-item"><spin class="text-light border-bottom">Mail: </spin><a target="_blank" href="https://goo.gl/maps/gvV4nMLc3PsbHXx76" class="opacity-50 nav-link d-inline-block px-0 pt-1 pb-2">#233, Manjunatha Nilaya J.P Nagar,5th phase,Bangalore-560078.</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fs-xs text-center pb-2 pb-lg-0 mb-0">
+        <span class="text-light">Copyright &copy; Wonder geo mapping consultancy and services 2022 All rights reserved </span>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+  <!-- End Back to top button -->
+
+  <!-- Required Library Files -->
+    <!-- Vendor Scripts -->
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="./assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="./assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="./assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="./assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="./assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="./assets/js/theme.min.js"></script>
+  <!-- End Required Library Files -->
+</body>
+</html>
