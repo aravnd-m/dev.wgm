@@ -138,40 +138,40 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10">
-            <form class="row needs-validation" novalidate>
+            <form class="row needs-validation" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSfPnm9SgTSJDxa_ivrsBlkN-jvefiE8Zc9HCalJq5bcGptNDQ/formResponse" method="POST" novalidate>
               <div class="col-sm-6 mb-4">
                 <label for="fn" class="form-label">First name</label>
-                <input type="text" id="fn" class="form-control" required>
+                <input type="text" id="fn" class="form-control" name="entry.139799451" required>
                 <div class="invalid-feedback">Please, enter your first name!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="ln" class="form-label">Last name</label>
-                <input type="text" id="ln" class="form-control" required>
+                <input type="text" id="ln" class="form-control" name="entry.105224659" required>
                 <div class="invalid-feedback">Please, enter your last name!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" id="email" class="form-control" required>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" class="form-control" name="entry.631750214" required>
                 <div class="invalid-feedback">Please, provide a valid email address!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="phone" class="form-label">Phone</label>
-                <input type="text" id="phone" class="form-control" required data-format="custom" data-delimiter="-" data-blocks="2 3 3" data-numeral="8" placeholder="00-000-000">
+                <input type="text" id="phone" class="form-control" required data-format="custom" data-delimiter="-" data-blocks="2 3 3" data-numeral="8" placeholder="00-000-000" name="entry.330791552">
                 <div class="invalid-feedback">Please, choose your contact number!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="city" class="form-label">Country</label>
-                  <input type="text" id="email" class="form-control" required>
-                <div class="invalid-feedback">Please, choose your city!</div>
+                  <input type="text" id="email" class="form-control" name="entry.1623602800" required>
+                <div class="invalid-feedback">Please, choose your Country Name!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="company" class="form-label">Your company</label>
-                <input type="text" id="company" class="form-control" required>
+                <input type="text" id="company" class="form-control" name="entry.55625712" required>
                 <div class="invalid-feedback">Please, provide your company name!</div>
               </div>
               <div class="col-sm-12 mb-4">
                 <label for="position" class="form-label">Your position</label>
-                <select id="position" class="form-select">
+                <select id="position" class="form-select" name="entry.671830873">
                   <option value="Employee">Employee</option>
                   <option value="Owner">Owner</option>
                   <option value="CEO">CEO</option>
@@ -180,7 +180,7 @@
               </div>
               <div class="col-12 mb-4">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-control" rows="4" required></textarea>
+                <textarea id="message" class="form-control" rows="4" name="entry.55626914" required></textarea>
                 <div class="invalid-feedback">Please, enter your message!</div>
               </div>
               <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
